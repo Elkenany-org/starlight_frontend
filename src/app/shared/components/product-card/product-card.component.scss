@@ -1,0 +1,40 @@
+.card {
+    display: inline-block; /* Display cards inline */
+    width: calc(24% - 25px); /* Adjust width to allow space for margins */
+    margin: 5px 10px; /* Add a small margin between cards */
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Align text to the left */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  
+  @media (max-width: 768px) {
+    .card {
+    width: calc(49% - 25px);
+    }
+    }
+
+  .image-wrapper {
+    margin: 10px; /* Add margin between image and card container */
+  }
+    .card-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+  
+  .card-content {
+    padding: 16px;
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+    margin: 8px 0;
+  }
+  
+  .card-description {
+    font-size: 1rem;
+    color: #666;
+  }
+  

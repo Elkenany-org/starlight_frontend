@@ -1,0 +1,83 @@
+/* Cover Styles */
+.cover {
+    background-image: url('../../../assets/first.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 600px;
+    position: relative;
+    z-index: 1; /* Ensure the cover is above other elements */
+  }
+  
+  .cover-content {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 83px;
+    transform: translateY(-50%);
+    max-width: 70%;
+  }
+  
+
+  
+  .cover p {
+    font-size: 22px;
+    margin-bottom: 20px;
+    max-width: 75%;
+    line-height: 3;
+  }
+  
+  .button {
+    text-align: end;
+    max-width: 75%;
+  }
+  
+  .cta-button {
+    background-color: #2f394a;
+    color: white;
+    padding: 23px 40px;
+    border: none;
+    border-radius: 37px;
+    font-size: 22px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .cta-button:hover {
+    background-color: #e58300;
+  }
+
+  //////////////////////
+  /// 
+  /// 
+  /// 
+  /// 
+  @media (max-width: 768px) {
+    .cover-content {
+      position: static;
+      max-width: 100%;
+      text-align: center;
+      padding: 20px; /* Add some padding to the cover content */
+      transform: none;
+    }
+    
+    .cover p {
+      font-size: 18px;
+    }
+    
+    .container {
+      width: 100%;
+      padding: 0 20px; /* Add some padding to the container */
+    }
+    
+    .card-row {
+      margin: 15px 0;
+    }
+  }
+
+
+
+  .container {
+    width: 80%;
+    margin: auto;
+    padding: 0 20px; /* Add some padding to the container */
+
+}
