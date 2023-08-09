@@ -15,6 +15,7 @@ import { ProductCardComponent } from './shared/components/product-card/product-c
 import { FilterComponent } from './shared/components/filter/filter.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTabsModule } from '@angular/material/tabs';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { MatTabsModule } from '@angular/material/tabs';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatTabsModule
+    MatTabsModule,
+    SlickCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

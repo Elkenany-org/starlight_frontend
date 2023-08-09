@@ -1,50 +1,16 @@
 @import './_variables';
+@import './overrides';
 
 /* You can add global styles to this file, and also import other style files */
-body, ul, li, h1, h2, h3, p, div {
+body, ul, li {
     // margin: 0;
     // padding: 0;
     list-style: none;
     font-family: Arial, sans-serif;
     color: $primary-color;
   }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; 
+html, body { height: 100%; 
+}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;background: $background-color;
 color: $primary-color;}
 
-h1{
-    font-size: 60px !important;
-    margin: 10px 0px !important;
-    line-height: 1 !important;
-}
-
-
-.mat-mdc-tab-header{
-    margin: 36px auto;
-}
-@media (min-width: 991px) {
-    .mat-mdc-tab-header{
-        width: 50%;
-    }
-}
-
-.mat-mdc-tab.mdc-tab--active .mdc-tab__text-label {
-    font-weight: bolder;
-    font-size: 22px;
-}
-
-.mat-mdc-tab-group, .mat-mdc-tab-nav-bar {
-    --mdc-tab-indicator-active-indicator-color: $primary-color !important;
-    --mat-tab-header-disabled-ripple-color: rgba(0, 0, 0, 0.38);
-    --mat-tab-header-pagination-icon-color: #000;
-    --mat-tab-header-inactive-label-text-color: rgba(0, 0, 0, 0.6);
-    --mat-tab-header-active-label-text-color: $primary-color !important;
-    --mat-tab-header-active-ripple-color: $primary-color !important;
-    --mat-tab-header-inactive-ripple-color: $primary-color !important;
-    --mat-tab-header-inactive-focus-label-text-color: rgba(0, 0, 0, 0.6);
-    --mat-tab-header-inactive-hover-label-text-color: rgba(0, 0, 0, 0.6);
-    --mat-tab-header-active-focus-label-text-color: $primary-color !important;
-    --mat-tab-header-active-hover-label-text-color: $primary-color !important;
-    --mat-tab-header-active-focus-indicator-color: $primary-color !important;
-    --mat-tab-header-active-hover-indicator-color: $primary-color !important;
-}
