@@ -1,9 +1,9 @@
 @import '../../../assets/styles/variables';
-@import "../../../../node_modules/slick-carousel/slick/slick.scss";
-@import "../../../../node_modules/slick-carousel/slick/slick-theme.scss";
+// @import "../../../../node_modules/slick-carousel/slick/slick.scss";
+// @import "../../../../node_modules/slick-carousel/slick/slick-theme.scss";
 /* Cover Styles */
 .cover {
-    background-image: url('../../../assets/first.png');
+    background-image: url('../../../assets/cover.jpg');
     background-size: cover;
     background-position: center;
     min-height: 600px;
@@ -37,16 +37,18 @@
     background-color: $primary-color;
     box-shadow: 20px 20px 60px #00000066;
     color: white;
-    padding: 23px 40px;
+    padding: 0px 1.5rem;
     border: none;
     border-radius: 37px;
     font-size: 22px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
+    height: 60px;
+
   }
   
   .cta-button:hover {
-    background-color: $accent-color;
+    background-color: $third-color;
   }
 
   //////////////////////
@@ -69,7 +71,7 @@
     
     .container {
       width: 100%;
-      padding: 0 20px; /* Add some padding to the container */
+      // padding: 0 20px; /* Add some padding to the container */
     }
     
     .card-row {
@@ -79,11 +81,16 @@
 
 
 
-  .container {
+.container {
     width: 80%;
     margin: 47px auto;
-    padding: 0 20px; /* Add some padding to the container */
+    // padding: 0 20px; /* Add some padding to the container */
 
+}
+@media (max-width: 768px) {
+  .container {
+    width: 96%;
+}
 }
 
 
@@ -105,10 +112,28 @@
 
 
 
+.header-slider{
+  width: 80%; 
+  margin: auto;
+
+  @media (max-width: 768px) {
+  width: 96%; 
+  }
+
+  @media (min-width: 768px) {
+    h1{
+      transform: translate(0, 130%)!important;
+    }    
+  
+  }
+}
 
 
-
-
+.header-container{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px auto;
+}
 
 
 
@@ -171,9 +196,60 @@
 }
 
 .card-image {
-  // max-width: 100%;
-  // height: auto;
-
   height: 150px;
   width: 100%;
+}
+
+
+
+
+
+
+
+///////////////////////////contact-us
+/// 
+
+.contact-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-image: url('../../../assets/contact.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 400px;
+  position: relative;
+  z-index: 1; /* Ensure the cover is above other elements */
+  margin-bottom: 4rem;
+
+}
+
+.contact-container img {
+  width: 100%;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  // top: 20%; /* Adjust as needed */
+  left: 0;
+  // 
+  display: flex;
+
+  justify-content: space-around;
+  align-items: center;
+  // margin: 0 20px;
+  @media (min-width: 768px) {
+  top: 30%;
+  width: 100%;
+
+  }
+
+
+}
+
+.overlay p {
+  margin: 0;
+  font-size: 4rem;
+  font-weight: 100;
+  line-height: 1;
 }

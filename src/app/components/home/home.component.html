@@ -3,18 +3,18 @@
       <h1>Welcome to Our Website</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies diam ac justo vehicula, ac aliquam arcu facilisis.
       </p>
-            <div class="button"><button class="cta-button">Learn More <i class="fa-solid fa-chevron-right"></i>
-      </button></div>
+            <div class="button"><button class="cta-button">Learn More <i class="fa-solid fa-chevron-right"></i></button></div>
     </div>
   </div>
   
 
   
 
-  <div class="container">
+  <div class="container" >
     <h1>Top Products</h1>
 
     <mat-tab-group>
+      
         <mat-tab label="Grains" >
             <div class="card-row">
                 <app-product-card   imageUrl="assets/first.png" title="Card Title" description="Card Description Lorem ipsum dolor sit amet..." ></app-product-card>
@@ -49,24 +49,25 @@
   </div>
 
 
-  <div class="container">
-    <h1>Other Categories</h1>
-
-
+  <div >
+    <div class="header-slider" ><h1>Other Categories</h1></div>
+    <ngx-slick-carousel class="carousel" 
+      #slickModal="slick-carousel" 
+      [config]="slideConfig">
+      
+    <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+    <img src="{{ slide.img }}" alt="" width="100%">
+    </div>
+    </ngx-slick-carousel>
   </div>
-
-<ngx-slick-carousel class="carousel" 
-  #slickModal="slick-carousel" 
-  [config]="slideConfig">
-<div ngxSlickItem *ngFor="let slide of slides" class="slide">
-<img src="{{ slide.img }}" alt="" width="100%">
-</div>
-</ngx-slick-carousel>
 
 
 
 <div class="container">
-    <h1>Other Categories</h1>
+  <div class="header-container">
+    <h1>Latest Events</h1>
+    <button class="cta-button">Learn More <i class="fa-solid fa-chevron-right"></i></button>
+  </div>
 
     <div class="card-container">
 
@@ -84,3 +85,27 @@
 
   </div>
 
+
+
+
+  <div class="contact-container">
+    <div class="overlay">
+      <div>
+        <h1 class="d-block">Design Website</h1>
+        <p>Easier than ever.</p>
+      </div>
+      
+      <button class="cta-button"><b>Contact Us </b><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+  </div>
+
+
+  <!-- <div class="contact-container">
+    <div class="cover-content">
+      <h1>Welcome to Our Website</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies diam ac justo vehicula, ac aliquam arcu facilisis.
+      </p>
+            <div class="button"><button class="cta-button">Learn More <i class="fa-solid fa-chevron-right"></i></button></div>
+    </div>
+  </div>
+   -->
