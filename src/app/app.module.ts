@@ -36,7 +36,8 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatTabsModule,
-    SlickCarouselModule
+    SlickCarouselModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

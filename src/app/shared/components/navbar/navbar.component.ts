@@ -7,8 +7,8 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
   navbarItems = [
-    { label: 'Home', active: true },
-    { label: 'About Us', active: false },
+    { label: 'Home', active: true ,link:''},
+    { label: 'About Us', active: false ,link:'/about-us'},
     { label: 'Products', active: false },
     { label: 'Events', active: false },
     { label: 'Contact Us', active: false }
