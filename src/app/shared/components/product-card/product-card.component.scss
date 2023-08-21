@@ -2,7 +2,7 @@
     display: inline-block; /* Display cards inline */
     width: calc(24% - 25px); /* Adjust width to allow space for margins */
     margin: 5px 10px; /* Add a small margin between cards */
-    border-radius: 4px;
+    border-radius: 25px;
     overflow: hidden;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: left; /* Align text to the left */
@@ -21,7 +21,7 @@
     .card-image {
     width: 100%;
     height: auto;
-    border-radius: 4px;
+    border-radius: 25px;
   }
   
   .card-content {

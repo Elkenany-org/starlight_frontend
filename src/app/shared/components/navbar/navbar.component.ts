@@ -1,20 +1,37 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit{
   navbarItems = [
-    { label: 'Home', active: true ,link:''},
+    { label: 'Home', active: false ,link:'/'},
     { label: 'About Us', active: false ,link:'/about-us'},
-    { label: 'Products', active: false },
+    { label: 'Products', active: false,link:'products' },
     { label: 'Events', active: false },
     { label: 'Contact Us', active: false }
   ];
-
   isMenuOpen = false;
+
+  constructor(private router: Router) {
+  }
+
+
+  ngOnInit(): void {
+    this.router.events.subscribe(events => {
+      if (events instanceof NavigationEnd) {
+        this.navbarItems.forEach(item => {
+          if(item.link === this.router.url){
+            item.active= true
+          }
+        });
+  }
+})
+}
+
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;

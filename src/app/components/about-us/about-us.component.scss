@@ -33,13 +33,12 @@ body {
     background-color: #f0f0f0;
   }
   
-  .image-container,.image-container1 {
-    position: relative;
+  .image-container,.image-container1 ,.image-container2{
+    // position: relative;
     max-width: 100%;
-    // overflow: hidden; /* Ensure the container does not expand with box overflow */
     max-width: 90%;
     margin: auto;
-    margin-bottom: 5rem;
+    // margin-bottom: 5rem;
         img {
         max-width: 60%;
         height: auto;
@@ -52,20 +51,23 @@ body {
 
   
   .overflow-box {
-    position: absolute;
-    top: 30%;
-    left: 50%;
+    // position: absolute;
+    // top: 30%;
+    // left: 50%;
     padding: 20px;
     background-color: $background-color;
     color: $primary-color;
-    width: fit-content;
-    // max-height: 100%;
-    max-height: fit-content;
-
+    // width: fit-content;
+    max-height: 90%;
+    // max-height: fit-content;
+    max-width: 585px;
     overflow-y: auto;
     box-sizing: border-box;
     text-align: center;
     border-radius: 8px;
+    margin-top: -20rem;
+    margin-left: 40%;
+    position: relative;
     h2{
         font: normal normal 900 2rem/40px Roboto;
     }
@@ -81,8 +83,9 @@ body {
   
 
 
+
   .image-container1{
-    margin-bottom: 8rem;
+    // margin-bottom: 8rem;
     img{
         margin-left: 40%;
     }
@@ -90,22 +93,49 @@ body {
         right: 50%;
         left: 0;
         top: 20%;
+
+        margin-left: 0;
+        margin-top: -23rem;
     }
   }
 
+  .image-container2{
+    // margin-bottom: 20rem;
+    // margin-top: 21rem;
+
+    img{
+        margin: auto;
+    }
+    .overflow-box {
+
+        margin-left: auto;
+        margin-top: -10rem;
+        margin-right: auto;
+    }
+  }
 
   @media (max-width: 991px) {
 
     .image-container,.image-container1 {
-        margin-bottom: 6rem;  
-        
+        // margin-bottom: 6rem;          
+        img{
+        max-width: 90%;
+    }
+      }
+      .image-container2 {
+        // margin-bottom: 16em;  
+        // margin-top: 14rem;
         img{
         max-width: 90%;
     }
       }
       .image-container .overflow-box {
       left: 10%; /* Align to the left on smaller screens */
-      max-height: fit-content;
+      max-height: fit-content;    
+      margin-top: -3rem;
+      margin-left: 0;
+
+      
     }
     .image-container1 {
         img{
@@ -113,31 +143,56 @@ body {
         }
         .overflow-box {
         right: 10%; /* Align to the left on smaller screens */
-        max-height: fit-content;
+        max-height: fit-content;    
+        margin-top: -3rem;
+      margin-left: 0;
       }
     }
+
+    .image-container2 {
+      img{
+        margin: auto;
+        }
+      .overflow-box {
+      max-height: fit-content;
+      max-width: 100%;
+      margin-top: -3rem;
+
+    }
+  }
   }
 
 
 
-  @media (max-width: 767px) {
-
-    .image-container {
-        margin-bottom: 12rem;
-      }
-
-     .image-container1 {
-        margin-bottom: 16rem;
-      }
+.add-dev{
+  padding: 7rem 0;
+}
+@media (max-width: 991px) {
+  .add-dev{
+    padding: 3rem 0;
   }
 
-  @media (max-width: 450px) {
+}
 
-    .image-container,.image-container1 {
-        margin-bottom: 21rem;
-      }
 
+hr{
+  margin: 10rem 0;
+  color: $background-color ;
+  opacity: 0.7;
+}
+
+@media (max-width: 767px) {
+  hr{
+    margin: 3rem 0;
   }
+  
+}
 
-
-
+.get-intouch {
+  font: normal normal normal 1rem/28px Roboto !important;
+  color: $accent-color;
+}
+.icon{
+  color: rgb($accent-color,0.6);
+  padding: 1rem 0;
+}
