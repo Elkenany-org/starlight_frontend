@@ -1,5 +1,51 @@
 <img class="main-cover" src="assets/about-us2.jpg" alt="">
 
-<div class="container" >
+<div class="container my-5" >
     <h1>Top Products</h1>
+
+    <div class="main-grid my-5">
+        <div class="list">
+
+            <ul class="px-4 py-3 filter">
+                <li>
+                    <form class="d-flex" (ngSubmit)="onSearchSubmit()">
+                        <button class="btn btn-primary" type="submit" class="search-icon">
+                          <i class="fa-solid fa-magnifying-glass p-1"></i>
+                        </button>
+                        <input class="form-control mx-1" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="searchTerm" name="yourInputName">
+                      </form>
+
+                    <hr>
+                </li>
+
+                <li>
+                    <mat-radio-group [(ngModel)]="selectedValue" (change)="onSelectionChange()">
+                        <mat-radio-button *ngFor="let item of items" [value]="item.value">
+                         <li class="filter">{{ item.label }}</li> 
+                        </mat-radio-button>
+                      </mat-radio-group>
+
+
+                      <!-- <form [formGroup]="form">
+                        <select class="form-control" formControlName="selectedValue">
+                          <option *ngFor="let option of options" [value]="option.value">{{ option.label }}</option>
+                        </select>
+                      </form> -->
+                </li>
+
+            </ul>
+        </div>
+        <div class="sub-grid">
+            
+            <app-product-card imageUrl="assets/first.png" title="Card Title" description="Card Description Lorem ipsum dolor sit amet..." ></app-product-card>
+            <app-product-card imageUrl="assets/first.png" title="Card Title" description="Card Description Lorem ipsum dolor sit amet..." ></app-product-card>
+            <app-product-card imageUrl="assets/first.png" title="Card Title" description="Card Description Lorem ipsum dolor sit amet..." ></app-product-card>
+            <app-product-card imageUrl="assets/first.png" title="Card Title" description="Card Description Lorem ipsum dolor sit amet..." ></app-product-card>
+            <app-product-card imageUrl="assets/first.png" title="Card Title" description="Card Description Lorem ipsum dolor sit amet..." ></app-product-card>
+
+
+        </div>
+    </div>
+
+      
 </div>

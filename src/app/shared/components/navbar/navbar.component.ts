@@ -10,7 +10,7 @@ export class NavbarComponent implements OnInit{
   navbarItems = [
     { label: 'Home', active: false ,link:'/'},
     { label: 'About Us', active: false ,link:'/about-us'},
-    { label: 'Products', active: false,link:'products' },
+    { label: 'Products', active: false,link:'/products' },
     { label: 'Events', active: false },
     { label: 'Contact Us', active: false }
   ];

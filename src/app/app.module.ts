@@ -16,6 +16,12 @@ import { FilterComponent } from './shared/components/filter/filter.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTabsModule } from '@angular/material/tabs';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
+import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatOptionModule } from '@angular/material/core';
+import { MatSelectModule } from '@angular/material/select';
+import { MatRadioModule } from '@angular/material/radio';
 
 @NgModule({
   declarations: [
@@ -37,6 +43,13 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
     BrowserAnimationsModule,
     MatTabsModule,
     SlickCarouselModule,
+    MatMenuModule,
+    MatIconModule,
+    FormsModule, // Add FormsModule here,
+    MatOptionModule, // Add this line
+    MatSelectModule, // Add this line
+    MatRadioModule,
+    ReactiveFormsModule, // Add this line
     
   ],
   providers: [],

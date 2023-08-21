@@ -1,19 +1,23 @@
 .card {
     display: inline-block; /* Display cards inline */
-    width: calc(24% - 25px); /* Adjust width to allow space for margins */
-    margin: 5px 10px; /* Add a small margin between cards */
-    border-radius: 25px;
+    // width: calc(24% - 25px); /* Adjust width to allow space for margins */
+    // margin: 5px 10px; /* Add a small margin between cards */
     overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: left; /* Align text to the left */
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 14px;
+    opacity: 1;
+    border: none;
+
   }
   
-  @media (max-width: 768px) {
-    .card {
-    width: calc(49% - 25px);
-    }
-    }
+  // @media (max-width: 768px) {
+  //   .card {
+  //   width: calc(49% - 25px);
+  //   }
+  //   }
 
   .image-wrapper {
     margin: 10px; /* Add margin between image and card container */
