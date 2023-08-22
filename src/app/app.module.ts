@@ -22,6 +22,8 @@ import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatOptionModule } from '@angular/material/core';
 import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
+import { BlogDetailsComponent } from './components/blog-details/blog-details.component';
+import { BlogCardComponent } from './shared/components/blog-card/blog-card.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { MatRadioModule } from '@angular/material/radio';
     ProductDetailsComponent,
     BlogComponent,
     ProductCardComponent,
-    FilterComponent
+    FilterComponent,
+    BlogDetailsComponent,
+    BlogCardComponent
   ],
   imports: [
     BrowserModule,

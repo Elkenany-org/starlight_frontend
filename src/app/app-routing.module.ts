@@ -6,6 +6,8 @@ import { HomeComponent } from './components/home/home.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { BlogComponent } from './components/blog/blog.component';
 import { ProductsComponent } from './components/products/products.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { BlogDetailsComponent } from './components/blog-details/blog-details.component';
 
 const routes: Routes = [
   {
@@ -21,12 +23,21 @@ const routes: Routes = [
     component:ProductsComponent
   },
   {
-    path:'events',
-    component:AboutUsComponent
+    path:'product-details/:id',
+    component:ProductDetailsComponent
   },
+
   {
-    path:'blog',
+    path:'events',
     component:BlogComponent
+  },
+  // {
+  //   path:'blog',
+  //   component:BlogComponent
+  // },
+  {
+    path:'event-details/:id',
+    component:BlogDetailsComponent
   },
   {
     path:'contact-us',

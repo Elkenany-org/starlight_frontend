@@ -67,6 +67,7 @@
     left: 0;
   }
   
+  @media (max-width: 768px) {
   .navbar ul.show {
     display: block;
     position: absolute;
@@ -83,7 +84,7 @@
     text-align: center;
     margin: 20px 0;
   }
-
+  }
   
 
   /* Media Query for Small Screens */

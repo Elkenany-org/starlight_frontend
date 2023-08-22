@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
+import {  Router } from '@angular/router';
 
 @Component({
-  selector: 'app-blog',
-  templateUrl: './blog.component.html',
-  styleUrls: ['./blog.component.scss']
+  selector: 'app-blog-card',
+  templateUrl: './blog-card.component.html',
+  styleUrls: ['./blog-card.component.scss']
 })
-export class BlogComponent {
+export class BlogCardComponent {
+  constructor(private router:Router){}
   blog = [
     { img: 'assets/food.jpg' ,type:1}, 
     { img: 'assets/livestock.jpg' ,type:2},
@@ -16,4 +18,8 @@ export class BlogComponent {
     { img: 'assets/food.jpg' ,type:1}, 
     { img: 'assets/livestock.jpg' ,type:2},
   ];
+
+  navigate(id:any){
+    this.router.navigateByUrl('event-details/1');
+  }
 }

@@ -11,8 +11,8 @@ export class NavbarComponent implements OnInit{
     { label: 'Home', active: false ,link:'/'},
     { label: 'About Us', active: false ,link:'/about-us'},
     { label: 'Products', active: false,link:'/products' },
-    { label: 'Events', active: false },
-    { label: 'Contact Us', active: false }
+    { label: 'Events', active: false ,link:'/events'},
+    { label: 'Contact Us', active: false ,link:'/contact-us'}
   ];
   isMenuOpen = false;
 
@@ -41,5 +41,7 @@ export class NavbarComponent implements OnInit{
     this.navbarItems.forEach(item => {
       item.active = item === activeItem;
     });
+    this.isMenuOpen = !this.isMenuOpen;
+
   }
 }

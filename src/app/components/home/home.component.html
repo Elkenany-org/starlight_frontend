@@ -69,19 +69,7 @@
     <button class="cta-button">Learn More <i class="fa-solid fa-chevron-right"></i></button>
   </div>
 
-    <div class="card-container">
-
-    <div class="card" *ngFor="let new of blog" [ngClass]="{'card-type-1': new.type === 1, 'card-type-2': new.type === 2}">
-        <div class="card-content">
-        <p class="date">12jun</p>
-        <h2 class="card-title">Card Title</h2>
-        <p class="card-description">Card Description Lorem ipsum dolor sit amet...</p>
-        <img src="assets/first.png" alt="Card Image" class="card-image">
-        </div>
-
-      </div>
-
-    </div>
+      <app-blog-card></app-blog-card>
 
   </div>
 

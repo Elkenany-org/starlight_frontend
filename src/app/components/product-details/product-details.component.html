@@ -1,1 +1,35 @@
-<p>product-details works!</p>
+<img class="main-cover" src="assets/about-us2.jpg" alt="">
+
+<div class="container my-5" >
+    <h1>Grains and Oils</h1>
+
+    <div class="row">
+        <div class="col-12 col-lg-9 pe-lg-5">
+           <p> We have global capabilities to meet global demand, with 60% of our grains and oilseeds assets based in South America – the world’s largest exporting region. COFCO International focuses its strategy for these
+</p>
+            <img width="100%" src="assets/about-us2.jpg" alt="">
+        </div>
+
+        <div class="col-8 mt-5 mt-lg-0 m-auto col-lg-3 form-container">
+
+            <h2 class="text-center py-2">Get in touch</h2>
+            <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+                <input class="form-control" type="text" id="field1" formControlName="field1" placeholder="field 1">
+              
+                <input class="form-control" type="text" id="field2" formControlName="field2" placeholder="field 2">
+              
+                <input class="form-control" type="text" id="field3" formControlName="field3" placeholder="field 3">
+              
+                <input class="form-control" type="text" id="field4" formControlName="field4" placeholder="field 4">
+              
+                <textarea class="form-control" id="textField" formControlName="textField" placeholder="text feild"></textarea>
+              
+                <button class="form-control submit" type="submit">Submit</button>
+              </form>
+
+              
+        </div>
+
+    </div>
+
+</div>
