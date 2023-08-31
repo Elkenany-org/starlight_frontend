@@ -1,11 +1,11 @@
-<a routerLink="/product-details/1">
+<a [routerLink]="'/product-details/' + data.id">
   <div class="card">
     <div class="image-wrapper">
-    <img [src]="imageUrl" alt="Card Image" class="card-image">
+      <img [src]="data.images_url[0]" alt="Card Image" class="card-image">
     </div>
     <div class="card-content">
-      <h2 class="card-title">Card Title</h2>
-      <p class="card-description">Card Description Lorem ipsum dolor sit amet...</p>
+      <h2 class="card-title">{{data.title}}</h2>
+      <p class="card-description">{{data.shortdescription | slice:0:50 }}</p>
     </div>
 </div>
 </a>

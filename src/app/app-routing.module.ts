@@ -8,28 +8,49 @@ import { BlogComponent } from './components/blog/blog.component';
 import { ProductsComponent } from './components/products/products.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { BlogDetailsComponent } from './components/blog-details/blog-details.component';
+import { homeResolver } from './_resolvers/home.resolver';
+import { blogdetailsResolver } from './_resolvers/blogdetails.resolver';
+import { blogResolver } from './_resolvers/blog.resolver';
+import { aboutusResolver } from './_resolvers/aboutus.resolver';
+import { productdetailsResolver } from './_resolvers/productdetails.resolver';
+import { productsResolver } from './_resolvers/products.resolver';
 
 const routes: Routes = [
   {
     path:'',
-    component:HomeComponent
+    component:HomeComponent,
+    resolve: {
+      routeResolver: homeResolver
+    },
   },
   {
     path:'about-us',
-    component:AboutUsComponent
+    component:AboutUsComponent,
+    resolve:{
+      routeResolver: aboutusResolver
+    }
   },
   {
     path:'products',
-    component:ProductsComponent
+    component:ProductsComponent,
+    resolve:{
+      routeResolver: productsResolver
+    }
   },
   {
     path:'product-details/:id',
-    component:ProductDetailsComponent
+    component:ProductDetailsComponent,
+    resolve:{
+      routeResolver: productdetailsResolver
+    }
   },
 
   {
     path:'events',
-    component:BlogComponent
+    component:BlogComponent,
+    resolve:{
+      routeResolver: blogResolver
+    }
   },
   // {
   //   path:'blog',
@@ -37,7 +58,10 @@ const routes: Routes = [
   // },
   {
     path:'event-details/:id',
-    component:BlogDetailsComponent
+    component:BlogDetailsComponent,
+    resolve: {
+      routeResolver: blogdetailsResolver
+    },
   },
   {
     path:'contact-us',

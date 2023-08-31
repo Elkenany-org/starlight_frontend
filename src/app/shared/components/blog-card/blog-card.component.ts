@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import {  Router } from '@angular/router';
+import { Home,Event } from 'src/app/_interfaces/home';
 
 @Component({
   selector: 'app-blog-card',
@@ -7,19 +8,11 @@ import {  Router } from '@angular/router';
   styleUrls: ['./blog-card.component.scss']
 })
 export class BlogCardComponent {
+  @Input() data!: Event[];
+
   constructor(private router:Router){}
-  blog = [
-    { img: 'assets/food.jpg' ,type:1}, 
-    { img: 'assets/livestock.jpg' ,type:2},
-    { img: 'assets/food.jpg' ,type:1}, 
-    { img: 'assets/livestock.jpg' ,type:2},
-    { img: 'assets/food.jpg' ,type:1}, 
-    { img: 'assets/livestock.jpg' ,type:2},
-    { img: 'assets/food.jpg' ,type:1}, 
-    { img: 'assets/livestock.jpg' ,type:2},
-  ];
 
   navigate(id:any){
-    this.router.navigateByUrl('event-details/1');
+    this.router.navigateByUrl(`event-details/${id}`);
   }
 }

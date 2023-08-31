@@ -27,9 +27,20 @@ export class NavbarComponent implements OnInit{
           if(item.link === this.router.url){
             item.active= true
           }
-        });
+          if(this.router.url.startsWith('/products') ) {
+            if(item.link.startsWith('/products') ){
+              this.navbarItems.forEach(item1 => {
+                item1.active = item1 === item;
+              });
+            }
+
+            
+        }
+      }
+        );
   }
 })
+
 }
 
 
@@ -37,7 +48,7 @@ export class NavbarComponent implements OnInit{
     this.isMenuOpen = !this.isMenuOpen;
   }
   
-  setActive(activeItem: any) {
+  setActive(activeItem: any) {    
     this.navbarItems.forEach(item => {
       item.active = item === activeItem;
     });

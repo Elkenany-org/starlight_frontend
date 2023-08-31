@@ -7,20 +7,20 @@
         <div class="row m-2 ">
             <div class="col-md-4 col-6" >
                 <i class="fa-regular fa-envelope icon"></i>
-                <div>info@starlight-ae.com</div>
+                <div class="wrap">{{info.email}}</div>
                 <div class="icon">Email</div>
             </div>
 
             <div class="col-md-4 col-6">
                 <i class="fa-solid fa-mobile-screen-button icon"></i>
-                <div>+399 399 233 166</div>
+                <div>{{info.phone}}</div>
                 <div class="icon">Phone</div>
 
             </div>
 
             <div class="col-md-4 ">
                 <i class="fa-solid fa-map-pin icon"></i>
-                <div>Main Street 32b, NYC</div>
+                <div>{{info.address}}</div>
                 <div class="icon">Adress</div>
 
             </div>
@@ -28,15 +28,15 @@
 
         <div class="row">
             <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
-                <input class=" col-10 col-md-5 input" type="text" id="field1" formControlName="field1" placeholder="field 1">
+                <input class=" col-10 col-md-5 input" type="text" id="first_name" formControlName="first_name" placeholder="First name">
               
-                <input class="col-10 col-md-5 input" type="text" id="field2" formControlName="field2" placeholder="field 2">
+                <input class="col-10 col-md-5 input" type="text" id="second_name" formControlName="second_name" placeholder="Second name">
               
-                <input class="col-10 col-md-5 input" type="text" id="field3" formControlName="field3" placeholder="field 3">
+                <input class="col-10 col-md-5 input" type="text" id="email" formControlName="email" placeholder="Email">
               
-                <input class="col-10 col-md-5 input" type="text" id="field4" formControlName="field4" placeholder="field 4">
+                <input class="col-10 col-md-5 input" type="text" id="phone" formControlName="phone" placeholder="Phone">
               
-                <textarea class="col-10 mx-0 input" id="textField" rows="7" formControlName="textField" placeholder="text feild"></textarea>
+                <textarea class="col-10 mx-0 input" id="message" rows="7" formControlName="message" placeholder="Message"></textarea>
               
                 <button class="form-control submit" type="submit">Send message</button>
               </form>

@@ -1,8 +1,7 @@
 <div class="cover">
     <div class="cover-content">
       <h1>Welcome to Our Website</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies diam ac justo vehicula, ac aliquam arcu facilisis.
-      </p>
+      <p> {{home.header.desc}} </p>
             <div class="button"><button class="cta-button">Learn More <i class="fa-solid fa-chevron-right"></i></button></div>
     </div>
   </div>
@@ -15,36 +14,14 @@
 
     <mat-tab-group>
       
-        <mat-tab label="Grains" >
+      
+        <mat-tab *ngFor="let cat of home.categories_products" label="{{cat.name}}" >
             <div class="card-row">
-                <app-product-card   imageUrl="assets/first.png" title="Card Title" description="Card Description Lorem ipsum dolor sit amet..." ></app-product-card>
-                <app-product-card   imageUrl="assets/first.png" title="Card Title" description="Card Description Lorem ipsum dolor sit amet..." ></app-product-card>
-                <app-product-card   imageUrl="assets/first.png" title="Card Title" description="Card Description Lorem ipsum dolor sit amet..." ></app-product-card>
-                <app-product-card   imageUrl="assets/first.png" title="Card Title" description="Card Description Lorem ipsum dolor sit amet..." ></app-product-card>
-
+                <app-product-card *ngFor="let prod of cat.products" [data]="prod" ></app-product-card>
             </div>
             
         </mat-tab>
-        <mat-tab label="Nuts">
-            <div class="card-row">
-                <app-product-card   imageUrl="assets/first.png" title="Card Title" description="Card Description Lorem ipsum dolor sit amet..." ></app-product-card>
-                <app-product-card   imageUrl="assets/first.png" title="Card Title" description="Card Description Lorem ipsum dolor sit amet..." ></app-product-card>
-                <app-product-card   imageUrl="assets/first.png" title="Card Title" description="Card Description Lorem ipsum dolor sit amet..." ></app-product-card>
-                <app-product-card   imageUrl="assets/first.png" title="Card Title" description="Card Description Lorem ipsum dolor sit amet..." ></app-product-card>
 
-            </div>
-            
-        </mat-tab>
-        <mat-tab label="Commodities">
-            <div class="card-row">
-                <app-product-card   imageUrl="assets/first.png" title="Card Title" description="Card Description Lorem ipsum dolor sit amet..." ></app-product-card>
-                <app-product-card   imageUrl="assets/first.png" title="Card Title" description="Card Description Lorem ipsum dolor sit amet..." ></app-product-card>
-                <app-product-card   imageUrl="assets/first.png" title="Card Title" description="Card Description Lorem ipsum dolor sit amet..." ></app-product-card>
-                <app-product-card   imageUrl="assets/first.png" title="Card Title" description="Card Description Lorem ipsum dolor sit amet..." ></app-product-card>
-
-            </div>
-            
-        </mat-tab>
       </mat-tab-group>
   </div>
 
@@ -55,8 +32,8 @@
       #slickModal="slick-carousel" 
       [config]="slideConfig">
       
-    <div ngxSlickItem *ngFor="let slide of slides" class="slide">
-    <img src="{{ slide.img }}" alt="" width="100%">
+    <div ngxSlickItem *ngFor="let slide of home.categories" class="slide">
+    <img style="cursor: pointer;" src="{{ slide.image_url}}" routerLink="/products" [queryParams]="{ id: slide.id}"  alt="" width="100%">
     </div>
     </ngx-slick-carousel>
   </div>
@@ -69,7 +46,7 @@
     <button class="cta-button">Learn More <i class="fa-solid fa-chevron-right"></i></button>
   </div>
 
-      <app-blog-card></app-blog-card>
+      <app-blog-card [data]="home.events"></app-blog-card>
 
   </div>
 
@@ -86,14 +63,3 @@
       <button class="cta-button"><b>Contact Us </b><i class="fa-solid fa-chevron-right"></i></button>
     </div>
   </div>
-
-
-  <!-- <div class="contact-container">
-    <div class="cover-content">
-      <h1>Welcome to Our Website</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies diam ac justo vehicula, ac aliquam arcu facilisis.
-      </p>
-            <div class="button"><button class="cta-button">Learn More <i class="fa-solid fa-chevron-right"></i></button></div>
-    </div>
-  </div>
-   -->

@@ -1,9 +1,41 @@
 @import '../../../assets/styles/variables';
 
 
-.main-cover{
-        width: 100%;
-    }
+.image-cover-container {
+  position: relative;
+  display: inline-block; /* or block, depending on your layout needs */
+}
+
+.main-cover {
+  max-width: 100%;
+  height: auto;
+}
+
+.image-text {
+  position: absolute;
+  top: 5%;
+  left: 10%;
+  color: white;
+  h2{
+      font-size: 3vw; /* Use percentage-based font size */
+  }
+  h1{
+    font-size: 5vw !important; /* Use percentage-based font size */
+    padding: 0;
+  }
+}
+
+@media (min-width: 767px) { 
+  .image-text {
+    top: 25%;
+    left: 10%;  
+  }
+
+   h2{
+padding-top: 2rem;
+  }
+}
+
 .container-fluid{
     background-color: $primary-color;
     color: white;
@@ -195,4 +227,9 @@ hr{
 .icon{
   color: rgb($accent-color,0.6);
   padding: 1rem 0;
+}
+
+
+.wrap{
+  overflow-wrap: anywhere;
 }

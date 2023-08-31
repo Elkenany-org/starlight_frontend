@@ -24,6 +24,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 import { BlogDetailsComponent } from './components/blog-details/blog-details.component';
 import { BlogCardComponent } from './shared/components/blog-card/blog-card.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -54,6 +56,9 @@ import { BlogCardComponent } from './shared/components/blog-card/blog-card.compo
     MatSelectModule, // Add this line
     MatRadioModule,
     ReactiveFormsModule, // Add this line
+    HttpClientModule,
+    ToastrModule.forRoot() // Add this line
+
     
   ],
   providers: [],

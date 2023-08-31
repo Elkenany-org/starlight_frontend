@@ -20,28 +20,18 @@
 
                 <li>
                     <mat-radio-group [(ngModel)]="selectedValue" (change)="onSelectionChange()">
-                        <mat-radio-button *ngFor="let item of items" [value]="item.value">
-                         <li class="filter">{{ item.label }}</li> 
+                        <mat-radio-button class="d-block" *ngFor="let cat of allProducts.categories" [value]="cat.id">
+                         <li class="filter">{{ cat.name }}</li> 
                         </mat-radio-button>
                       </mat-radio-group>
 
-
-                      <!-- <form [formGroup]="form">
-                        <select class="form-control" formControlName="selectedValue">
-                          <option *ngFor="let option of options" [value]="option.value">{{ option.label }}</option>
-                        </select>
-                      </form> -->
                 </li>
 
             </ul>
         </div>
         <div class="sub-grid">
             
-            <app-product-card imageUrl="assets/first.png" title="Card Title" description="Card Description Lorem ipsum dolor sit amet..." ></app-product-card>
-            <app-product-card imageUrl="assets/first.png" title="Card Title" description="Card Description Lorem ipsum dolor sit amet..." ></app-product-card>
-            <app-product-card imageUrl="assets/first.png" title="Card Title" description="Card Description Lorem ipsum dolor sit amet..." ></app-product-card>
-            <app-product-card imageUrl="assets/first.png" title="Card Title" description="Card Description Lorem ipsum dolor sit amet..." ></app-product-card>
-            <app-product-card imageUrl="assets/first.png" title="Card Title" description="Card Description Lorem ipsum dolor sit amet..." ></app-product-card>
+            <app-product-card *ngFor="let prod of allProducts.products" [data]="prod" ></app-product-card>
 
 
         </div>
