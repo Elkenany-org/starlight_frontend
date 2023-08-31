@@ -26,6 +26,9 @@ export class NavbarComponent implements OnInit{
         this.navbarItems.forEach(item => {
           if(item.link === this.router.url){
             item.active= true
+            this.navbarItems.forEach(item1 => {
+              item1.active = item1 === item;
+            });
           }
           if(this.router.url.startsWith('/products') ) {
             if(item.link.startsWith('/products') ){

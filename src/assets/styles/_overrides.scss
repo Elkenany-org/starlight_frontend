@@ -43,14 +43,14 @@ h1{
   }
 
 .slick-next{
-    right: calc(10% + 100px) !important;
+    right: calc( 100px) !important;
     top: 3%!important;
     transform: translate(0, 20%)!important;
   }
   .slick-prev{
     top: 3%!important;
     transform: translate(0, 20%)!important;
-    left: calc(90% - 200px)!important;
+    left: calc(100% - 200px)!important;
     z-index: 100!important;
   }
 
@@ -85,17 +85,17 @@ h1{
     background-color: #e58300;
   }
   
-  .container {
-    width: 80%;
-    margin: auto;
+//   .container {
+//     width: 80%;
+//     margin: auto;
 
-}
-  @media (max-width: 768px) {
-    .container {
-      width: 96%;
-  }
+// }
+  // @media (max-width: 768px) {
+  //   .container {
+  //     width: 100%;
+  // }
 
-  }
+  // }
   
 
   input[type="text"]:focus ,

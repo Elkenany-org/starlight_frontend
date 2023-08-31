@@ -35,6 +35,10 @@
   
   .footer-logo img {
     max-width: 100%;
+    @media (max-width:768px){
+      background: white;
+      margin: 2rem 0;
+    }
   }
   
   .footer-columns {
