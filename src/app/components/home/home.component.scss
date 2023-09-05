@@ -165,6 +165,8 @@ a{
   position: relative;
   z-index: 1; /* Ensure the cover is above other elements */
   margin-bottom: 4rem;
+  display: flex;
+  align-items: center;
 
 }
 
