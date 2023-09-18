@@ -10,7 +10,9 @@
            </p>
             <!-- <img width="100%" src="{{prodDetails.images_url}}" alt=""> -->
             <div class="row mt-5">
-                <div *ngFor="let image of prodDetails.images_url" class="col-md-4 col-6 my-1"><img height="150px" width="100%" src="{{image}}" alt=""></div>
+                <div *ngFor="let image of prodDetails.images_url.slice(1)" class="col-md-4 col-6 my-1">
+                    <img height="150px" width="100%" src="{{image}}" alt="">
+                </div>
            </div>
         </div>
 
